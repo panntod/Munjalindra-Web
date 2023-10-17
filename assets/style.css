@@ -1,19 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-:root{
-    --main-color: #FF7A00;
-    --second-color:#4F4F4F;
-    --font-color:#000000;
-    --second-font-color:#5B5B5B;
-    --font-nav: 600 16px 'Poppins', sans-serif;
+:root {
+  --main-color: #ff7a00;
+  --second-color: #4f4f4f;
+  --font-color: #000000;
+  --second-font-color: #5b5b5b;
+  --font-nav: 600 16px "Poppins", sans-serif;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.navbar ul {
+  padding-right: 100px;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  color: var(--font-color);
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font: var(--font-nav);
+  color: var(--second-font-color);
+}
+
+.navbar ul li.aktif a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after,
+.navbar ul li.aktif::after {
+  width: 100%;
+}
+
+a.btn-subscribe{
+    color: #fff;
+    font: var(--font-nav);
+    background: var(--main-color);
+}
+
+a.btn-subscribe:hover{
+    color: var(--main-color);
+    border: .5px solid var(--main-color);
 }

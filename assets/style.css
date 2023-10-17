@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+/* General */
 :root {
   --main-color: #ff7a00;
   --second-color: #4f4f4f;
   --font-color: #000000;
   --second-font-color: #5b5b5b;
   --font-nav: 600 16px "Poppins", sans-serif;
+  --font-h1: 1000 32px "Poppins", sans-serif;
+  --font-p: 600 16px "Poppins", sans-serif;
 }
 
 * {
@@ -17,6 +20,8 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+/* navbar */
 
 .navbar ul {
   padding-right: 100px;
@@ -58,13 +63,103 @@ html {
   width: 100%;
 }
 
-a.btn-subscribe{
-    color: #fff;
-    font: var(--font-nav);
-    background: var(--main-color);
+a.btn-subscribe {
+  color: #fff;
+  font: var(--font-nav);
+  background: var(--main-color);
 }
 
-a.btn-subscribe:hover{
-    color: var(--main-color);
-    border: .5px solid var(--main-color);
+a.btn-subscribe:hover {
+  color: var(--main-color);
+  border: 0.5px solid var(--main-color);
+}
+
+/* landing page */
+
+main {
+  background: url("https://ld-wp73.template-help.com/wordpress/prod_25026/v2/wp-content/uploads/2019/08/head-bg.png")
+    center/cover no-repeat;
+  margin-top: 5.5rem;
+  height: 100vh;
+}
+
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.content {
+  padding: 20px;
+  width: 500px;
+  margin: 5rem;
+}
+
+h1.content {
+  font: var(--font-h1);
+  margin-bottom: 10px;
+}
+
+p {
+  font: var(--font-p);
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+/* section our clients */
+.container-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+h1.section-header {
+  position: relative;
+}
+
+h1.section-header::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+}
+
+/* card our clients */
+.card-container {
+  border: 1px solid #efefef;
+  position: relative;
+  width: 18rem;
+  height: 10rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  background: #efefef;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(100%);
+}
+
+.card-container:hover {
+  filter: grayscale(0%);
+  background: white;
+  transform: scale(1.1);
+}
+
+.card-container img {
+  width: 8rem;
+  height: auto;
+  display: block;
+}
+
+.row {
+  margin: 0 -15px;
+}
+
+.col-3 {
+  padding: 0 15px;
 }

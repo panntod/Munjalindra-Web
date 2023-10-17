@@ -9,6 +9,7 @@
   --font-nav: 600 16px "Poppins", sans-serif;
   --font-h1: 1000 32px "Poppins", sans-serif;
   --font-p: 600 16px "Poppins", sans-serif;
+  --font-p-services: 500 12px "Poppins", sans-serif;
 }
 
 * {
@@ -17,8 +18,16 @@
 }
 
 html {
-  overflow-x: hidden;
+  user-select: none;
   scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+section {
+  padding-bottom: 8rem;
 }
 
 /* navbar */
@@ -86,7 +95,6 @@ main {
 .landing-page {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
 }
 
@@ -105,6 +113,19 @@ p {
   font: var(--font-p);
   color: var(--main-color);
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 567px) {
+  .content {
+    padding: 20px;
+    width: 500px;
+    margin: 1rem;
+  }
+  .landing-page {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
 }
 
 /* section our clients */
@@ -156,10 +177,92 @@ h1.section-header::after {
   display: block;
 }
 
-.row {
-  margin: 0 -15px;
+@media screen and (max-width: 567px) {
+  .card-container {
+    width: 9rem;
+    height: 5rem;
+  }
+
+  .card-container img {
+    width: 4em;
+    height: auto;
+  }
 }
 
-.col-3 {
-  padding: 0 15px;
+/* Our Services */
+
+p.services {
+  color: var(--second-font-color);
+}
+
+.header-services {
+  font: var(--font-p);
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.header-services:hover {
+  color: var(--main-color);
+  font-size: 1.01rem;
+}
+
+.services .service-item .icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.services .service-item .icon i.bi {
+  z-index: 2;
+  font-size: 2.5rem;
+  position: relative;
+  color: var(--font-color);
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #eeeeee;
+  border-radius: 50px;
+  z-index: 1;
+  top: 15px;
+  right: -10px;
+  transition: 0.3s;
+}
+
+.services .service-item h3 {
+  color: var(--font-color);
+  font: var(--font-p);
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 4px solid #eeeeee;
+  transition: 0.3s;
+}
+
+.services .service-item p {
+  color: var(--second-font-color);
+  font: var(--font-p-services);
+  margin-bottom: 0;
+}
+
+.services .service-item .readmore {
+  margin-top: 15px;
+  font: var(--font-p-services);
+  text-decoration: none;
+  display: inline-block;
+  color: var(--main-color);
+}
+
+.services .service-item:hover .icon:before {
+  background: var(--main-color);
+}
+
+.services .service-item:hover h3 {
+  border-color: var(--main-color);
 }

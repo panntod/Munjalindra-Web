@@ -266,3 +266,17 @@ p.services {
 .services .service-item:hover h3 {
   border-color: var(--main-color);
 }
+
+/* Our team */
+
+.image-container{
+  width: 10rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.image-container img{
+  width: 100%;
+  height: auto;
+}
+

@@ -153,6 +153,16 @@ h1.section-header::after {
   bottom: -15px;
 }
 
+.business{
+  width: 400px;
+}
+
+@media screen and (max-width: 567px) {
+  .business{
+    width: 200px;
+  }
+}
+
 /* card our clients */
 .card-container {
   border: 1px solid #efefef;

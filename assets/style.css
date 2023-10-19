@@ -2,12 +2,15 @@
 
 /* General */
 :root {
-  --main-color: #ff7a00;
-  --second-color: #4f4f4f;
+  --main-color: #FF6229;
+  --bg-linear: linear-gradient(to right, #FF6229, #ffba31);;
+  --bg-linear-second: linear-gradient(to right, #343C5C, #3b3d44);;
+  --second-color: #343C5C;
   --font-color: #000000;
   --second-font-color: #5b5b5b;
   --font-nav: 600 16px "Poppins", sans-serif;
   --font-h1: 1000 32px "Poppins", sans-serif;
+  --font-h1-business: 900 28px "Poppins", sans-serif;
   --font-p: 600 16px "Poppins", sans-serif;
   --font-p-services: 500 12px "Poppins", sans-serif;
 }
@@ -79,12 +82,12 @@ section {
 a.btn-subscribe {
   color: #fff;
   font: var(--font-nav);
-  background: var(--main-color);
+  background: var(--bg-linear);
 }
 
 a.btn-subscribe:hover {
   color: var(--main-color);
-  border: 0.5px solid var(--main-color);
+  background: #fff;
 }
 
 /* landing page */
@@ -340,14 +343,40 @@ p.services {
 
 .developer{
   color: #fff;
-  background: var(--main-color);
+  background: var(--bg-linear);
 }
 
 .marketing{
   color: #fff;
-  background-color: var(--second-color);
+  background: var(--bg-linear-second);
 }
 
 .project{
   color: var(--main-color);
+}
+
+/* Businness */
+h1.header-business{
+  font: var(--font-h1-business);
+  text-align: center;
+}
+
+.desc-business h1{
+  font: var(--font-h1-business);
+  color: var(--main-color);
+}
+
+.desc-business p{
+  color: var(--second-font-color);
+}
+
+a.btn-learn {
+  color: #fff;
+  font: var(--font-nav);
+  background: var(--second-color);
+}
+
+a.btn-learn:hover {
+  color: var(--second-color);
+  border: 0.5px solid var(--second-color);
 }

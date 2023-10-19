@@ -26,6 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+body a{
+  text-decoration: none;
+}
+
 section {
   padding-bottom: 8rem;
 }

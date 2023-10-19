@@ -22,7 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -269,14 +269,71 @@ p.services {
 
 /* Our team */
 
-.image-container{
-  width: 10rem;
-  height: auto;
+.image-container {
+  width: 600px;
+  height: 360px;
   overflow: hidden;
 }
 
-.image-container img{
+.image-container img {
   width: 100%;
   height: auto;
+  max-width: 100%;
+  transition: transform 5s;
 }
 
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.ourteam{
+  width: 600px;
+}
+
+.ourteam h1{
+  font: var(--font-h1);
+}
+
+.ourteam p{
+  font: var(--font-p);
+  color: var(--second-font-color);
+}
+
+@media screen and (max-width: 567px) {
+  .image-container {
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .ourteam{
+    width: auto;
+  }
+}
+
+.card-team{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+  height: 160px;
+  transition: transform 1s;
+}
+
+.card-team:hover{
+  transform: scale(1.1);
+}
+
+.developer{
+  color: #fff;
+  background: var(--main-color);
+}
+
+.marketing{
+  color: #fff;
+  background-color: var(--second-color);
+}
+
+.project{
+  color: var(--main-color);
+}

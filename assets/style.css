@@ -2,10 +2,10 @@
 
 /* General */
 :root {
-  --main-color: #FF6229;
-  --bg-linear: linear-gradient(to right, #FF6229, #ffba31);;
-  --bg-linear-second: linear-gradient(to right, #343C5C, #3b3d44);;
-  --second-color: #343C5C;
+  --main-color: #ff6229;
+  --bg-linear: linear-gradient(to right, #ff6229, #ffba31);
+  --bg-linear-second: linear-gradient(to right, #343c5c, #3b3d44);
+  --second-color: #343c5c;
   --font-color: #000000;
   --second-font-color: #5b5b5b;
   --font-nav: 600 16px "Poppins", sans-serif;
@@ -13,6 +13,8 @@
   --font-h1-business: 900 28px "Poppins", sans-serif;
   --font-p: 600 16px "Poppins", sans-serif;
   --font-p-services: 500 12px "Poppins", sans-serif;
+  --font-p-testimonial: 600 20px "Poppins", sans-serif;
+  --font-h1-profile: 700 26px "Poppins", sans-serif;
 }
 
 * {
@@ -29,12 +31,13 @@ body {
   overflow-x: hidden;
 }
 
-body a{
+body a {
   text-decoration: none;
 }
 
 section {
   padding-bottom: 8rem;
+  overflow-x: hidden;
 }
 
 /* navbar */
@@ -156,12 +159,12 @@ h1.section-header::after {
   bottom: -15px;
 }
 
-.business{
+.business {
   width: 400px;
 }
 
 @media screen and (max-width: 567px) {
-  .business{
+  .business {
     width: 200px;
   }
 }
@@ -303,15 +306,15 @@ p.services {
   transform: scale(1.1);
 }
 
-.ourteam{
+.ourteam {
   width: 600px;
 }
 
-.ourteam h1{
+.ourteam h1 {
   font: var(--font-h1);
 }
 
-.ourteam p{
+.ourteam p {
   font: var(--font-p);
   color: var(--second-font-color);
 }
@@ -322,12 +325,12 @@ p.services {
     height: auto;
     margin-bottom: 10px;
   }
-  .ourteam{
+  .ourteam {
     width: auto;
   }
 }
 
-.card-team{
+.card-team {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -337,36 +340,36 @@ p.services {
   transition: transform 1s;
 }
 
-.card-team:hover{
+.card-team:hover {
   transform: scale(1.1);
 }
 
-.developer{
+.developer {
   color: #fff;
   background: var(--bg-linear);
 }
 
-.marketing{
+.marketing {
   color: #fff;
   background: var(--bg-linear-second);
 }
 
-.project{
+.project {
   color: var(--main-color);
 }
 
 /* Businness */
-h1.header-business{
+h1.header-business {
   font: var(--font-h1-business);
   text-align: center;
 }
 
-.desc-business h1{
+.desc-business h1 {
   font: var(--font-h1-business);
   color: var(--main-color);
 }
 
-.desc-business p{
+.desc-business p {
   color: var(--second-font-color);
 }
 
@@ -379,4 +382,63 @@ a.btn-learn {
 a.btn-learn:hover {
   color: var(--second-color);
   border: 0.5px solid var(--second-color);
+}
+
+/* testimonial */
+.image-container-testimonial {
+  width: 400px;
+  height: 800px;
+  overflow: hidden;
+}
+
+.image-container-testimonial img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  transition: transform 5s;
+}
+
+.image-container-testimonial img:hover {
+  transform: scale(1.05);
+}
+
+/* card testimonial */
+.card-testimonial {
+  width: 40rem;
+  height: 20rem;
+  align-items: center;
+  padding: 4rem;
+}
+
+.card-testimonial p {
+  color: var(--second-font-color);
+  font: var(--font-p-testimonial);
+}
+
+.profile img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  font: var(--font-h1-profile);
+}
+
+.profile p {
+  font: var(--font-p);
+  color: var(--main-color);
+}
+
+@media screen and (max-width: 567px) {
+  .image-container-testimonial {
+    width: auto;
+    height: auto;
+  }
+  .card-testimonial {
+    width: auto;
+    height: auto;
+    align-items: center;
+    padding: 4rem;
+  }
 }

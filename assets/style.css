@@ -42,8 +42,8 @@ section {
 
 /* navbar */
 
-.navbar ul {
-  padding-right: 100px;
+.nav-bg{
+  background: #fff;
 }
 
 .navbar ul li {
@@ -73,7 +73,7 @@ section {
   background: var(--main-color);
   position: absolute;
   left: 0;
-  bottom: -15px;
+  bottom: 0px;
   transition: 0.5s;
 }
 

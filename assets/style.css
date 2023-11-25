@@ -5,6 +5,7 @@
   --main-color: #ff6229;
   --bg-linear: linear-gradient(to right, #ff6229, #ffba31);
   --bg-linear-second: linear-gradient(to right, #343c5c, #3b3d44);
+  --bg-color: #efefef;
   --second-color: #343c5c;
   --font-color: #000000;
   --second-font-color: #5b5b5b;
@@ -40,10 +41,24 @@ section {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
 /* navbar */
 
-.bg-navbar{
-  background: #fff;
+.bg-navbar {
+  background: rgba(255, 255, 255, 0.7); /* Warna latar belakang dengan transparansi */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow dengan warna hitam */
 }
 
 .navbar ul li {
@@ -91,6 +106,14 @@ a.btn-subscribe {
 a.btn-subscribe:hover {
   color: var(--main-color);
   background: #fff;
+}
+
+.hamburger-container{
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
 }
 
 /* landing page */
@@ -189,14 +212,14 @@ h1.section-header::after {
 
 /* card our clients */
 .card-container {
-  border: 1px solid #efefef;
+  border: 1px solid var(--bg-color);
   position: relative;
   width: 18rem;
   height: 10rem;
   flex-shrink: 0;
   overflow: hidden;
   display: flex;
-  background: #efefef;
+  background: var(--bg-color);
   justify-content: center;
   align-items: center;
   transition: transform 0.3s, filter 0.3s;

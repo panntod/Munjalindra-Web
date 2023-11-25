@@ -42,7 +42,7 @@ section {
 
 /* navbar */
 
-.nav-bg{
+.bg-navbar{
   background: #fff;
 }
 
@@ -98,7 +98,7 @@ a.btn-subscribe:hover {
 main {
   background: url("https://ld-wp73.template-help.com/wordpress/prod_25026/v2/wp-content/uploads/2019/08/head-bg.png")
     center/cover no-repeat;
-  margin-top: 5.5rem;
+  /* margin-top: 5.5rem; */
   height: 100vh;
 }
 
@@ -125,6 +125,20 @@ p {
   margin-bottom: 20px;
 }
 
+.top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
 @media screen and (max-width: 567px) {
   .content {
     padding: 20px;
@@ -135,6 +149,10 @@ p {
     display: flex;
     align-items: center;
     height: 100%;
+  }
+  .top-button {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
   }
 }
 

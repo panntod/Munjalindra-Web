@@ -97,17 +97,6 @@ section {
   width: 100%;
 }
 
-a.btn-subscribe {
-  color: #fff;
-  font: var(--font-nav);
-  background: var(--bg-linear);
-}
-
-a.btn-subscribe:hover {
-  color: var(--main-color);
-  background: #fff;
-}
-
 .hamburger-container{
   width: 30px;
   display: flex;

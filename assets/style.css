@@ -137,6 +137,14 @@ p {
   margin-bottom: 20px;
 }
 
+.btn-gradient{
+  background: var(--bg-linear);
+}
+
+.btn-gradient:hover{
+  transform: scale(1.05);
+}
+
 .top-button {
   position: fixed;
   bottom: 20px;
@@ -229,12 +237,12 @@ h1.section-header::after {
 
 @media screen and (max-width: 567px) {
   .card-container {
-    width: 9rem;
-    height: 5rem;
+    width: auto;
+    height: 8rem;
   }
 
   .card-container img {
-    width: 4em;
+    width: 6rem;
     height: auto;
   }
 }

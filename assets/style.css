@@ -496,3 +496,15 @@ a.btn-learn:hover {
 .title-about{
   width: 30rem;
 }
+
+#percentage p{
+  color: var(--second-font-color);
+}
+
+#percentage p.main{
+  color: var(--main-color);
+}
+
+.progress-container{
+  margin: 1rem 0;
+}

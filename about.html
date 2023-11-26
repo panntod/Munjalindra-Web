@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div class="d-flex flex-column flex-sm-row-reverse justify-content-between my-5">
+      <div class="d-flex flex-column flex-sm-row-reverse justify-content-between my-5" id="percentage">
         <div class="image-container shadow-lg my-auto ms-2 ms-sm-0">
           <img src="assets/img/image-about-2.jpg" alt="...">
         </div>
@@ -196,29 +196,48 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script>
+    let isAnimated = false;
+
     // Fungsi untuk mengatur animasi progress bar dan hitung persentase
-    function animateProgressBar(className, maxValue) {
-      let width = 0;
-      const progressBar = $(`.${className}`);
-      const progressValue = progressBar.closest('.progress-container').find('.progress-value');
-  
-      const interval = setInterval(function () {
-        if (width >= maxValue) {
-          clearInterval(interval);
-        } else {
-          width++;
-          progressBar.css('width', width + '%');
-          progressValue.text(width + '%');
-        }
-      }, 30); // Ubah nilai interval untuk mengatur kecepatan animasi
+    function startProgressAnimation() {
+      if (!isAnimated) {
+        isAnimated = true;
+
+        const progressBars = [
+          { className: 'progress-bar-1', maxValue: 95 },
+          { className: 'progress-bar-2', maxValue: 90 },
+          { className: 'progress-bar-3', maxValue: 85 }
+        ];
+
+        progressBars.forEach(({ className, maxValue }) => {
+          let width = 0;
+          const progressBar = $(`.${className}`);
+          const progressValue = progressBar.closest('.progress-container').find('.progress-value');
+
+          const interval = setInterval(function () {
+            if (width >= maxValue) {
+              clearInterval(interval);
+            } else {
+              width++;
+              progressBar.css('width', width + '%');
+              progressValue.text(width + '%');
+            }
+          }, 30); // Ubah nilai interval untuk mengatur kecepatan animasi
+        });
+      }
     }
-  
-    // Panggil fungsi animasi ketika dokumen siap
-    $(document).ready(function () {
-      animateProgressBar('progress-bar-1', 95); // Progress Bar 1
-      animateProgressBar('progress-bar-2', 90); // Progress Bar 2
-      animateProgressBar('progress-bar-3', 85); // Progress Bar 3
+
+    // Menambahkan event listener untuk mendeteksi scroll ke halaman
+    window.addEventListener('scroll', function () {
+      const progressContainer = document.querySelector('.progress-container');
+      const progressContainerTop = progressContainer.offsetTop;
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > progressContainerTop - window.innerHeight + 100) {
+        startProgressAnimation();
+      }
     });
+
   </script>
   <script src="assets/scripts.js"></script>
 

@@ -107,4 +107,4 @@ function toggleNavbarClass() {
 window.addEventListener("scroll", toggleNavbarClass);
 
 initCounterAnimation();
-AOS.init();
+typeof AOS !== 'undefined' ? AOS.init() : "";

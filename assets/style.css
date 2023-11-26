@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 /* General */
-:root {
+:root {  
   --main-color: #ff6229;
   --bg-linear: linear-gradient(to right, #ff6229, #ffba31);
   --bg-linear-second: linear-gradient(to right, #343c5c, #3b3d44);
@@ -107,11 +107,18 @@ section {
 
 /* landing page */
 
-main {
+main{
+  min-height: 100vh;
+}
+
+main#home {
   background: url("https://ld-wp73.template-help.com/wordpress/prod_25026/v2/wp-content/uploads/2019/08/head-bg.png")
     center/cover no-repeat;
   /* margin-top: 5.5rem; */
-  height: 100vh;
+}
+
+main#about{
+  margin-top: 5rem;
 }
 
 .landing-page {
@@ -357,6 +364,10 @@ p.services {
   color: var(--second-font-color);
 }
 
+.ourteam p.main{
+  color: var(--main-color);
+}
+
 @media screen and (max-width: 567px) {
   .image-container {
     width: auto;
@@ -479,4 +490,9 @@ a.btn-learn:hover {
     align-items: center;
     padding: 4rem;
   }
+}
+
+/* About */
+.title-about{
+  width: 30rem;
 }

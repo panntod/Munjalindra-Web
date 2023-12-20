@@ -518,3 +518,33 @@ a.btn-learn:hover {
 .progress-container{
   margin: 1rem 0;
 }
+
+/* Service */
+.card-service{
+  padding: 1rem 2rem;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.img-service{
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-service img{
+  width: 300px;
+}
+
+.service-description h4{
+  color: var(--font-color);
+}
+
+.service-description h4:hover{
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.service-description p{
+  color: var(--second-font-color)
+}
